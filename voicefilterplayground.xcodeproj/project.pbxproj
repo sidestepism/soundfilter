@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BBA3FA6962FB191B328C032A /* Pods_voicefilterplayground.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7295E5F9A384ABEC0B3E95AD /* Pods_voicefilterplayground.framework */; };
+		F929F45F1C81AC810014A68D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F929F45E1C81AC810014A68D /* AppDelegate.swift */; };
+		F929F4611C81AC810014A68D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F929F4601C81AC810014A68D /* ViewController.swift */; };
+		F929F4631C81AC810014A68D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F929F4621C81AC810014A68D /* Assets.xcassets */; };
+		F929F4661C81AC810014A68D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F929F4641C81AC810014A68D /* Main.storyboard */; };
+		F929F4711C81AC810014A68D /* voicefilterplaygroundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F929F4701C81AC810014A68D /* voicefilterplaygroundTests.swift */; };
+		F929F47C1C81AC810014A68D /* voicefilterplaygroundUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F929F47B1C81AC810014A68D /* voicefilterplaygroundUITests.swift */; };
+		F929F48A1C81ADBE0014A68D /* AudioEngineManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F929F4891C81ADBE0014A68D /* AudioEngineManager.swift */; };
+		F929F48C1C81ADF70014A68D /* AppUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F929F48B1C81ADF70014A68D /* AppUtil.swift */; };
+		F929F4901C81D73A0014A68D /* WaveformVisualizerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F929F48F1C81D73A0014A68D /* WaveformVisualizerView.swift */; };
+		F929F4921C81DA2D0014A68D /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F929F4911C81DA2D0014A68D /* TestView.swift */; };
+		F929F4951C81E33A0014A68D /* nativedancer.wav in Resources */ = {isa = PBXBuildFile; fileRef = F929F4941C81E33A0014A68D /* nativedancer.wav */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F929F46D1C81AC810014A68D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F929F4531C81AC810014A68D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F929F45A1C81AC810014A68D;
+			remoteInfo = voicefilterplayground;
+		};
+		F929F4781C81AC810014A68D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F929F4531C81AC810014A68D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F929F45A1C81AC810014A68D;
+			remoteInfo = voicefilterplayground;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		16B91723231EAE6162A79372 /* Pods-voicefilterplayground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-voicefilterplayground.debug.xcconfig"; path = "Pods/Target Support Files/Pods-voicefilterplayground/Pods-voicefilterplayground.debug.xcconfig"; sourceTree = "<group>"; };
+		26380A0F682622A7C32A45FB /* Pods-voicefilterplayground.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-voicefilterplayground.release.xcconfig"; path = "Pods/Target Support Files/Pods-voicefilterplayground/Pods-voicefilterplayground.release.xcconfig"; sourceTree = "<group>"; };
+		7295E5F9A384ABEC0B3E95AD /* Pods_voicefilterplayground.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_voicefilterplayground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F929F45B1C81AC810014A68D /* voicefilterplayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = voicefilterplayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F929F45E1C81AC810014A68D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F929F4601C81AC810014A68D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F929F4621C81AC810014A68D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F929F4651C81AC810014A68D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F929F4671C81AC810014A68D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F929F46C1C81AC810014A68D /* voicefilterplaygroundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = voicefilterplaygroundTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F929F4701C81AC810014A68D /* voicefilterplaygroundTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = voicefilterplaygroundTests.swift; sourceTree = "<group>"; };
+		F929F4721C81AC810014A68D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F929F4771C81AC810014A68D /* voicefilterplaygroundUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = voicefilterplaygroundUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F929F47B1C81AC810014A68D /* voicefilterplaygroundUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = voicefilterplaygroundUITests.swift; sourceTree = "<group>"; };
+		F929F47D1C81AC810014A68D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F929F4891C81ADBE0014A68D /* AudioEngineManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioEngineManager.swift; sourceTree = "<group>"; };
+		F929F48B1C81ADF70014A68D /* AppUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppUtil.swift; path = ../AppUtil.swift; sourceTree = "<group>"; };
+		F929F48F1C81D73A0014A68D /* WaveformVisualizerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveformVisualizerView.swift; sourceTree = "<group>"; };
+		F929F4911C81DA2D0014A68D /* TestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		F929F4941C81E33A0014A68D /* nativedancer.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = nativedancer.wav; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F929F4581C81AC810014A68D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBA3FA6962FB191B328C032A /* Pods_voicefilterplayground.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F929F4691C81AC810014A68D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F929F4741C81AC810014A68D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0BF4B04F1B9B7149942091DB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				16B91723231EAE6162A79372 /* Pods-voicefilterplayground.debug.xcconfig */,
+				26380A0F682622A7C32A45FB /* Pods-voicefilterplayground.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C9B3059B9DF5B69C48B99648 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7295E5F9A384ABEC0B3E95AD /* Pods_voicefilterplayground.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F929F4521C81AC810014A68D = {
+			isa = PBXGroup;
+			children = (
+				F929F45D1C81AC810014A68D /* voicefilterplayground */,
+				F929F46F1C81AC810014A68D /* voicefilterplaygroundTests */,
+				F929F47A1C81AC810014A68D /* voicefilterplaygroundUITests */,
+				F929F45C1C81AC810014A68D /* Products */,
+				0BF4B04F1B9B7149942091DB /* Pods */,
+				C9B3059B9DF5B69C48B99648 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F929F45C1C81AC810014A68D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F929F45B1C81AC810014A68D /* voicefilterplayground.app */,
+				F929F46C1C81AC810014A68D /* voicefilterplaygroundTests.xctest */,
+				F929F4771C81AC810014A68D /* voicefilterplaygroundUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F929F45D1C81AC810014A68D /* voicefilterplayground */ = {
+			isa = PBXGroup;
+			children = (
+				F929F48B1C81ADF70014A68D /* AppUtil.swift */,
+				F929F45E1C81AC810014A68D /* AppDelegate.swift */,
+				F929F48F1C81D73A0014A68D /* WaveformVisualizerView.swift */,
+				F929F4911C81DA2D0014A68D /* TestView.swift */,
+				F929F4601C81AC810014A68D /* ViewController.swift */,
+				F929F4621C81AC810014A68D /* Assets.xcassets */,
+				F929F4931C81E33A0014A68D /* Voices */,
+				F929F4641C81AC810014A68D /* Main.storyboard */,
+				F929F4671C81AC810014A68D /* Info.plist */,
+				F929F4891C81ADBE0014A68D /* AudioEngineManager.swift */,
+			);
+			path = voicefilterplayground;
+			sourceTree = "<group>";
+		};
+		F929F46F1C81AC810014A68D /* voicefilterplaygroundTests */ = {
+			isa = PBXGroup;
+			children = (
+				F929F4701C81AC810014A68D /* voicefilterplaygroundTests.swift */,
+				F929F4721C81AC810014A68D /* Info.plist */,
+			);
+			path = voicefilterplaygroundTests;
+			sourceTree = "<group>";
+		};
+		F929F47A1C81AC810014A68D /* voicefilterplaygroundUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F929F47B1C81AC810014A68D /* voicefilterplaygroundUITests.swift */,
+				F929F47D1C81AC810014A68D /* Info.plist */,
+			);
+			path = voicefilterplaygroundUITests;
+			sourceTree = "<group>";
+		};
+		F929F4931C81E33A0014A68D /* Voices */ = {
+			isa = PBXGroup;
+			children = (
+				F929F4941C81E33A0014A68D /* nativedancer.wav */,
+			);
+			path = Voices;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F929F45A1C81AC810014A68D /* voicefilterplayground */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F929F4801C81AC810014A68D /* Build configuration list for PBXNativeTarget "voicefilterplayground" */;
+			buildPhases = (
+				0440414518FCDAB23F3AA18D /* Check Pods Manifest.lock */,
+				F929F4571C81AC810014A68D /* Sources */,
+				F929F4581C81AC810014A68D /* Frameworks */,
+				F929F4591C81AC810014A68D /* Resources */,
+				E189A6B2F73052B384A1BE0A /* Embed Pods Frameworks */,
+				F563E0D51CFFB101C05515C4 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = voicefilterplayground;
+			productName = voicefilterplayground;
+			productReference = F929F45B1C81AC810014A68D /* voicefilterplayground.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F929F46B1C81AC810014A68D /* voicefilterplaygroundTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F929F4831C81AC810014A68D /* Build configuration list for PBXNativeTarget "voicefilterplaygroundTests" */;
+			buildPhases = (
+				F929F4681C81AC810014A68D /* Sources */,
+				F929F4691C81AC810014A68D /* Frameworks */,
+				F929F46A1C81AC810014A68D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F929F46E1C81AC810014A68D /* PBXTargetDependency */,
+			);
+			name = voicefilterplaygroundTests;
+			productName = voicefilterplaygroundTests;
+			productReference = F929F46C1C81AC810014A68D /* voicefilterplaygroundTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F929F4761C81AC810014A68D /* voicefilterplaygroundUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F929F4861C81AC810014A68D /* Build configuration list for PBXNativeTarget "voicefilterplaygroundUITests" */;
+			buildPhases = (
+				F929F4731C81AC810014A68D /* Sources */,
+				F929F4741C81AC810014A68D /* Frameworks */,
+				F929F4751C81AC810014A68D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F929F4791C81AC810014A68D /* PBXTargetDependency */,
+			);
+			name = voicefilterplaygroundUITests;
+			productName = voicefilterplaygroundUITests;
+			productReference = F929F4771C81AC810014A68D /* voicefilterplaygroundUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F929F4531C81AC810014A68D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = fushimir;
+				TargetAttributes = {
+					F929F45A1C81AC810014A68D = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					F929F46B1C81AC810014A68D = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = F929F45A1C81AC810014A68D;
+					};
+					F929F4761C81AC810014A68D = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = F929F45A1C81AC810014A68D;
+					};
+				};
+			};
+			buildConfigurationList = F929F4561C81AC810014A68D /* Build configuration list for PBXProject "voicefilterplayground" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F929F4521C81AC810014A68D;
+			productRefGroup = F929F45C1C81AC810014A68D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F929F45A1C81AC810014A68D /* voicefilterplayground */,
+				F929F46B1C81AC810014A68D /* voicefilterplaygroundTests */,
+				F929F4761C81AC810014A68D /* voicefilterplaygroundUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F929F4591C81AC810014A68D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F929F4951C81E33A0014A68D /* nativedancer.wav in Resources */,
+				F929F4631C81AC810014A68D /* Assets.xcassets in Resources */,
+				F929F4661C81AC810014A68D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F929F46A1C81AC810014A68D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F929F4751C81AC810014A68D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0440414518FCDAB23F3AA18D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E189A6B2F73052B384A1BE0A /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-voicefilterplayground/Pods-voicefilterplayground-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F563E0D51CFFB101C05515C4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-voicefilterplayground/Pods-voicefilterplayground-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F929F4571C81AC810014A68D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F929F4921C81DA2D0014A68D /* TestView.swift in Sources */,
+				F929F4611C81AC810014A68D /* ViewController.swift in Sources */,
+				F929F45F1C81AC810014A68D /* AppDelegate.swift in Sources */,
+				F929F48A1C81ADBE0014A68D /* AudioEngineManager.swift in Sources */,
+				F929F4901C81D73A0014A68D /* WaveformVisualizerView.swift in Sources */,
+				F929F48C1C81ADF70014A68D /* AppUtil.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F929F4681C81AC810014A68D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F929F4711C81AC810014A68D /* voicefilterplaygroundTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F929F4731C81AC810014A68D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F929F47C1C81AC810014A68D /* voicefilterplaygroundUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F929F46E1C81AC810014A68D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F929F45A1C81AC810014A68D /* voicefilterplayground */;
+			targetProxy = F929F46D1C81AC810014A68D /* PBXContainerItemProxy */;
+		};
+		F929F4791C81AC810014A68D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F929F45A1C81AC810014A68D /* voicefilterplayground */;
+			targetProxy = F929F4781C81AC810014A68D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F929F4641C81AC810014A68D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F929F4651C81AC810014A68D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F929F47E1C81AC810014A68D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F929F47F1C81AC810014A68D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F929F4811C81AC810014A68D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16B91723231EAE6162A79372 /* Pods-voicefilterplayground.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = voicefilterplayground/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fushimir.voicefilterplayground;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F929F4821C81AC810014A68D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26380A0F682622A7C32A45FB /* Pods-voicefilterplayground.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = voicefilterplayground/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fushimir.voicefilterplayground;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F929F4841C81AC810014A68D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = voicefilterplaygroundTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fushimir.voicefilterplaygroundTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/voicefilterplayground.app/Contents/MacOS/voicefilterplayground";
+			};
+			name = Debug;
+		};
+		F929F4851C81AC810014A68D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = voicefilterplaygroundTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fushimir.voicefilterplaygroundTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/voicefilterplayground.app/Contents/MacOS/voicefilterplayground";
+			};
+			name = Release;
+		};
+		F929F4871C81AC810014A68D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = voicefilterplaygroundUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fushimir.voicefilterplaygroundUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = voicefilterplayground;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		F929F4881C81AC810014A68D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = voicefilterplaygroundUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fushimir.voicefilterplaygroundUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = voicefilterplayground;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F929F4561C81AC810014A68D /* Build configuration list for PBXProject "voicefilterplayground" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F929F47E1C81AC810014A68D /* Debug */,
+				F929F47F1C81AC810014A68D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F929F4801C81AC810014A68D /* Build configuration list for PBXNativeTarget "voicefilterplayground" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F929F4811C81AC810014A68D /* Debug */,
+				F929F4821C81AC810014A68D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F929F4831C81AC810014A68D /* Build configuration list for PBXNativeTarget "voicefilterplaygroundTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F929F4841C81AC810014A68D /* Debug */,
+				F929F4851C81AC810014A68D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F929F4861C81AC810014A68D /* Build configuration list for PBXNativeTarget "voicefilterplaygroundUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F929F4871C81AC810014A68D /* Debug */,
+				F929F4881C81AC810014A68D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F929F4531C81AC810014A68D /* Project object */;
+}

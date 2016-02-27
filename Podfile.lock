@@ -1,0 +1,18 @@
+PODS:
+  - Realm (0.98.3):
+    - Realm/Headers (= 0.98.3)
+  - Realm/Headers (0.98.3)
+  - RealmSwift (0.98.3):
+    - Realm (= 0.98.3)
+  - SwiftyUserDefaults (2.0.0)
+
+DEPENDENCIES:
+  - RealmSwift
+  - SwiftyUserDefaults
+
+SPEC CHECKSUMS:
+  Realm: c6a7d00221a2d5177810a674aebd40c5e0b70b0f
+  RealmSwift: d6ecad6e4c2a645d6ac956c2c7e9efb375f39c31
+  SwiftyUserDefaults: 1266e9734c68bcfbac8294ee84173dc8ba6db312
+
+COCOAPODS: 0.39.0
