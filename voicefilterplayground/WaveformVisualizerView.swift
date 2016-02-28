@@ -23,7 +23,7 @@ class WaveformVisualizerView: NSView {
     
     var active = false
 
-    override required init?(coder: NSCoder) {
+    required init?(coder: NSCoder) {
         super.init(coder: coder)
         NSLog("init coder")
     }

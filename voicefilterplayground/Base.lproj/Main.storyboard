@@ -201,33 +201,28 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5yB-OW-ml3">
-                                <rect key="frame" x="97" y="174" width="318" height="20"/>
-                                <sliderCell key="cell" alignment="left" maxValue="100" tickMarkPosition="above" sliderType="linear" id="Q6f-gN-oIK"/>
-                            </slider>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cf7-dq-peB">
-                                <rect key="frame" x="30" y="151" width="48" height="17"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Chorus" id="7kj-uk-Xo7">
+                                <rect key="frame" x="30" y="151" width="46" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Distort" id="7kj-uk-Xo7">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xF9-yd-T0Q">
-                                <rect key="frame" x="30" y="127" width="55" height="17"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Formant" id="Pqy-Jv-lyv">
+                                <rect key="frame" x="30" y="127" width="43" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Speed" id="Pqy-Jv-lyv">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lka-CS-5Np">
-                                <rect key="frame" x="97" y="149" width="318" height="20"/>
-                                <sliderCell key="cell" alignment="left" maxValue="100" tickMarkPosition="above" sliderType="linear" id="uqE-ev-jMQ"/>
-                            </slider>
                             <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vIP-n8-FOI">
-                                <rect key="frame" x="97" y="126" width="318" height="20"/>
-                                <sliderCell key="cell" alignment="left" maxValue="100" tickMarkPosition="above" sliderType="linear" id="COG-gg-GUU"/>
+                                <rect key="frame" x="97" y="121" width="318" height="25"/>
+                                <sliderCell key="cell" alignment="left" minValue="-100" maxValue="100" tickMarkPosition="below" numberOfTickMarks="11" sliderType="linear" id="COG-gg-GUU"/>
+                                <connections>
+                                    <action selector="SliderSpeedChanged:" target="XfG-lQ-9wD" id="vTd-gY-xJ3"/>
+                                </connections>
                             </slider>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eu0-SJ-4pl">
                                 <rect key="frame" x="31" y="233" width="78" height="18"/>
@@ -258,10 +253,13 @@
                             </button>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Moy-MH-vmM">
                                 <rect key="frame" x="278" y="211" width="53" height="18"/>
-                                <buttonCell key="cell" type="check" title="Loop" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="KGb-zX-kwZ">
+                                <buttonCell key="cell" type="check" title="Loop" bezelStyle="regularSquare" imagePosition="left" inset="2" id="KGb-zX-kwZ">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="checkboxLoopedValueChanged:" target="XfG-lQ-9wD" id="dQn-lt-ADr"/>
+                                </connections>
                             </button>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NQt-22-Ufr">
                                 <rect key="frame" x="31" y="211" width="87" height="18"/>
@@ -271,8 +269,37 @@
                                 </buttonCell>
                             </button>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Eh-T4-dyU" customClass="WaveformVisualizerView" customModule="voicefilterplayground">
-                                <rect key="frame" x="32" y="14" width="381" height="96"/>
+                                <rect key="frame" x="32" y="0.0" width="381" height="96"/>
                             </customView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VZZ-tM-l3f">
+                                <rect key="frame" x="30" y="104" width="35" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Pitch" id="Q3o-g9-EnE">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eV3-IS-QGd">
+                                <rect key="frame" x="97" y="98" width="318" height="25"/>
+                                <sliderCell key="cell" alignment="left" minValue="-100" maxValue="100" tickMarkPosition="below" numberOfTickMarks="11" allowsTickMarkValuesOnly="YES" sliderType="linear" id="oqY-ra-BTI"/>
+                                <connections>
+                                    <action selector="sliderPitchChanged:" target="XfG-lQ-9wD" id="23k-Zg-L4j"/>
+                                </connections>
+                            </slider>
+                            <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lka-CS-5Np">
+                                <rect key="frame" x="97" y="149" width="318" height="20"/>
+                                <sliderCell key="cell" alignment="left" maxValue="100" tickMarkPosition="above" sliderType="linear" id="uqE-ev-jMQ"/>
+                                <connections>
+                                    <action selector="sliderDistortionChanged:" target="XfG-lQ-9wD" id="mgF-dD-iV8"/>
+                                </connections>
+                            </slider>
+                            <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5yB-OW-ml3">
+                                <rect key="frame" x="97" y="174" width="318" height="20"/>
+                                <sliderCell key="cell" alignment="left" maxValue="200" tickMarkPosition="above" sliderType="linear" id="Q6f-gN-oIK"/>
+                                <connections>
+                                    <action selector="sliderDelayChanged:" target="XfG-lQ-9wD" id="pk2-xf-CDT"/>
+                                </connections>
+                            </slider>
                         </subviews>
                     </view>
                     <connections>
@@ -281,7 +308,7 @@
                         <outlet property="PlayModeRecAndPlay" destination="NQt-22-Ufr" id="RWV-EG-Gt9"/>
                         <outlet property="buttonPlay" destination="JKv-Ie-juk" id="zfH-ZR-uLs"/>
                         <outlet property="buttonRec" destination="2Iz-qp-zq2" id="iEE-Lq-qss"/>
-                        <outlet property="sliderChorus" destination="lka-CS-5Np" id="HcH-wx-PR2"/>
+                        <outlet property="checkboxLooped" destination="Moy-MH-vmM" id="uKk-HP-f41"/>
                         <outlet property="sliderDelay" destination="5yB-OW-ml3" id="nFu-ba-q58"/>
                         <outlet property="sliderFormant" destination="vIP-n8-FOI" id="gLJ-QX-kIT"/>
                         <outlet property="waveformVisualizerSubview" destination="7Eh-T4-dyU" id="DC0-cv-XFd"/>

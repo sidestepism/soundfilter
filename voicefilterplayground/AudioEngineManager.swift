@@ -14,6 +14,9 @@ class AudioEngineManager: NSObject {
     let player = AVAudioPlayerNode()
     
     private let pitch = AVAudioUnitTimePitch()
+    private let speed = AVAudioUnitVarispeed()
+    private let distortion = AVAudioUnitDistortion()
+    private let delay = AVAudioUnitDelay()
     private let mixer = AVAudioMixerNode() // ファイルフォーマットの不整合を吸収
     
     var recording = false
@@ -22,6 +25,23 @@ class AudioEngineManager: NSObject {
     var playerVolume: Float {
         get { return player.volume }
         set { player.volume = newValue }
+    }
+    
+    var AUPitch: Float {
+        get { return pitch.pitch }
+        set { pitch.pitch = newValue }
+    } // 100 = 1semitones
+    var AUSpeed: Float {
+        get { return speed.rate }
+        set { speed.rate = newValue }
+    }
+    var AUDelayTime: Double {
+        get { return delay.delayTime }
+        set { delay.delayTime = newValue }
+    }
+    var AUDistortion: Float {
+        get { return distortion.wetDryMix }
+        set { distortion.wetDryMix = newValue }
     }
     
     var inputLevel:Double = 0.0
@@ -55,14 +75,30 @@ class AudioEngineManager: NSObject {
             AppUtil.alert("ERROR", message: "input node not found")
             return
         }
+
+        AUDelayTime = 0.0
+        AUSpeed = 1.0
+        AUPitch = 0.0
+        AUDistortion = 50.0
+        distortion.loadFactoryPreset(AVAudioUnitDistortionPreset.SpeechRadioTower)
+
         let format = input.outputFormatForBus(0)
         engine.attachNode(player)
         engine.attachNode(mixer)
         engine.attachNode(pitch)
+        engine.attachNode(speed)
+        engine.attachNode(distortion)
+        engine.attachNode(delay)
+        
         playerVolume = 1.0
         engine.connect(player, to: mixer, format: format)
         engine.connect(mixer, to: pitch, format: nil)
-        engine.connect(pitch, to: engine.mainMixerNode, format: nil)
+
+        engine.connect(pitch, to: speed, format: nil)
+        engine.connect(speed, to: distortion, format: nil)
+        engine.connect(distortion, to: delay, format: nil)
+    
+        engine.connect(delay, to: engine.mainMixerNode, format: nil)
         engine.connect(input, to: engine.mainMixerNode, format: format)
         input.volume = 0
         startEngine()
@@ -203,9 +239,9 @@ class AudioEngineManager: NSObject {
                 comp()
             }
             self.playing = false
-//            if self.loop {
-//                self.startPlaying(fileURL, pitchShinfted: pitchShinfted, completion: completion)
-//            }
+            if self.loop {
+                self.startPlaying(fileURL, pitchShinfted: pitchShinfted, completion: completion)
+            }
         })
         player.play()
         playing = true

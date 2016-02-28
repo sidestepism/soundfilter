@@ -21,13 +21,17 @@ class ViewController: NSViewController {
     @IBOutlet weak var buttonPlay: NSButton!
     
     @IBOutlet weak var waveformVisualizerSubview: WaveformVisualizerView!
-
+    @IBOutlet weak var checkboxLooped: NSButton!
+    
     var recording = false
     var playing = false
     
-    // let filePath = NSURL(fileURLWithPath: NSTemporaryDirectory() + "/recording.wav")
-    let filePath = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForSoundResource("nativedancer.wav")!)
+    let filePath = NSURL(fileURLWithPath: NSTemporaryDirectory() + "/recording.wav")
+//    let filePath = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForSoundResource("atr.wav")
+//        ?? NSTemporaryDirectory() + "/recording.wav")
     // temporary file for recording
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +40,7 @@ class ViewController: NSViewController {
         // 波形をアップデート
         var _ = NSTimer.scheduledTimerWithTimeInterval(0.02,
             target: self, selector: "updateWaveformVisualizer", userInfo: nil, repeats: true)
+        
 
         waveformVisualizerSubview.volume = pow(AudioEngineManager.shared.inputLevel, 0.2)
         waveformVisualizerSubview.size = pow(AudioEngineManager.shared.inputLevel, 0.05)
@@ -56,8 +61,25 @@ class ViewController: NSViewController {
         }
     }
 
+    @IBAction func sliderDelayChanged(sender: AnyObject) {
+        AudioEngineManager.shared.AUDelayTime = (sender as! NSSlider).doubleValue
+    }
+    @IBAction func sliderDistortionChanged(sender: AnyObject) {
+//        (sender as NSSlider!).
+        AudioEngineManager.shared.AUDistortion = (sender as! NSSlider).floatValue
+    }
+    @IBAction func SliderSpeedChanged(sender: AnyObject) {
+        AudioEngineManager.shared.AUSpeed = sliderDelay.floatValue
+    }
+    @IBAction func sliderPitchChanged(sender: AnyObject) {
+        AudioEngineManager.shared.AUPitch = (sender as! NSSlider).floatValue
+    }
     @IBAction func RecButtonPushed(sender: AnyObject) {
         NSLog("RecButtonPushed, buttonPlay.enabled = %@", buttonPlay.enabled)
+        if playing {
+            AudioEngineManager.shared.stopPlaying()
+        }
+        
         if recording {
             AudioEngineManager.shared.stopRecording()
             buttonPlay.enabled = true
@@ -69,11 +91,20 @@ class ViewController: NSViewController {
         }
     }
 
+    @IBAction func checkboxLoopedValueChanged(sender: AnyObject) {
+        NSLog("checkboxLoopedValueChanged: %@", checkboxLooped.state)
+        AudioEngineManager.shared.loop = Bool(checkboxLooped.state)
+    }
+    
     @IBAction func PlayButtonPushed(sender: AnyObject) {
-        if recording {
-            AudioEngineManager.shared.stopRecording()
+        if playing {
+            AudioEngineManager.shared.stopPlaying()
+        } else {
+            if recording {
+                AudioEngineManager.shared.stopRecording()
+            }
+            AudioEngineManager.shared.startPlaying(filePath)
         }
-        AudioEngineManager.shared.startPlaying(filePath)
         
     }
 }
