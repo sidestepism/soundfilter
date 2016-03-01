@@ -26,7 +26,7 @@ class ViewController: NSViewController {
     var recording = false
     var playing = false
     
-    let filePath = NSURL(fileURLWithPath: NSTemporaryDirectory() + "/recording.wav")
+    let filePath = NSURL(fileURLWithPath: NSTemporaryDirectory() + "/hamigaki.m4a")
 //    let filePath = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForSoundResource("atr.wav")
 //        ?? NSTemporaryDirectory() + "/recording.wav")
     // temporary file for recording

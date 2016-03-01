@@ -18,6 +18,8 @@ class AudioEngineManager: NSObject {
     private let distortion = AVAudioUnitDistortion()
     private let delay = AVAudioUnitDelay()
     private let mixer = AVAudioMixerNode() // ファイルフォーマットの不整合を吸収
+
+    private let generator = SinWaveGenerator()
     
     var recording = false
     var playing = false
@@ -81,9 +83,12 @@ class AudioEngineManager: NSObject {
         AUPitch = 0.0
         AUDistortion = 50.0
         distortion.loadFactoryPreset(AVAudioUnitDistortionPreset.SpeechRadioTower)
+        
+        var sinGeneratorNode: AUNode;
 
         let format = input.outputFormatForBus(0)
         engine.attachNode(player)
+        engine.attachNode(generator.audioUnit)
         engine.attachNode(mixer)
         engine.attachNode(pitch)
         engine.attachNode(speed)

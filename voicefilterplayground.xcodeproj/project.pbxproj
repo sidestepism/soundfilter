@@ -20,6 +20,8 @@
 		F929F4921C81DA2D0014A68D /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F929F4911C81DA2D0014A68D /* TestView.swift */; };
 		F929F4951C81E33A0014A68D /* nativedancer.wav in Resources */ = {isa = PBXBuildFile; fileRef = F929F4941C81E33A0014A68D /* nativedancer.wav */; };
 		F929F4971C81EECE0014A68D /* atr.wav in Resources */ = {isa = PBXBuildFile; fileRef = F929F4961C81EECE0014A68D /* atr.wav */; };
+		F93B5CDE1C85E40000DF76CA /* SinWaveGeneratorSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93B5CDD1C85E40000DF76CA /* SinWaveGeneratorSample.swift */; };
+		F93B5CE01C85E44E00DF76CA /* SinWaveGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93B5CDF1C85E44E00DF76CA /* SinWaveGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,13 @@
 		F929F4911C81DA2D0014A68D /* TestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		F929F4941C81E33A0014A68D /* nativedancer.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = nativedancer.wav; sourceTree = "<group>"; };
 		F929F4961C81EECE0014A68D /* atr.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = atr.wav; sourceTree = "<group>"; };
+		F93B5C5F1C85DF7800DF76CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F93B5C611C85DF7800DF76CA /* Filter */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.bundle"; path = Filter; sourceTree = "<group>"; };
+		F93B5C621C85DF7800DF76CA /* PkgInfo */ = {isa = PBXFileReference; lastKnownFileType = text; path = PkgInfo; sourceTree = "<group>"; };
+		F93B5C641C85DF7800DF76CA /* CocoaFilterView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CocoaFilterView.bundle; sourceTree = "<group>"; };
+		F93B5C661C85DF7800DF76CA /* English */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F93B5CDD1C85E40000DF76CA /* SinWaveGeneratorSample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SinWaveGeneratorSample.swift; sourceTree = "<group>"; };
+		F93B5CDF1C85E44E00DF76CA /* SinWaveGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SinWaveGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +110,7 @@
 		C9B3059B9DF5B69C48B99648 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F93B5C5D1C85DF7800DF76CA /* LowPassFilter.component */,
 				7295E5F9A384ABEC0B3E95AD /* Pods_voicefilterplayground.framework */,
 			);
 			name = Frameworks;
@@ -109,6 +119,7 @@
 		F929F4521C81AC810014A68D = {
 			isa = PBXGroup;
 			children = (
+				F93B5C4D1C85DF6B00DF76CA /* AudioUnitManagers */,
 				F929F45D1C81AC810014A68D /* voicefilterplayground */,
 				F929F46F1C81AC810014A68D /* voicefilterplaygroundTests */,
 				F929F47A1C81AC810014A68D /* voicefilterplaygroundUITests */,
@@ -170,6 +181,53 @@
 				F929F4941C81E33A0014A68D /* nativedancer.wav */,
 			);
 			path = Voices;
+			sourceTree = "<group>";
+		};
+		F93B5C4D1C85DF6B00DF76CA /* AudioUnitManagers */ = {
+			isa = PBXGroup;
+			children = (
+				F93B5CDD1C85E40000DF76CA /* SinWaveGeneratorSample.swift */,
+				F93B5CDF1C85E44E00DF76CA /* SinWaveGenerator.swift */,
+			);
+			name = AudioUnitManagers;
+			path = voicefilterplayground/AudioUnits;
+			sourceTree = "<group>";
+		};
+		F93B5C5D1C85DF7800DF76CA /* LowPassFilter.component */ = {
+			isa = PBXGroup;
+			children = (
+				F93B5C5E1C85DF7800DF76CA /* Contents */,
+			);
+			name = LowPassFilter.component;
+			path = voicefilterplayground/AudioUnits/LowPassFilter.component;
+			sourceTree = "<group>";
+		};
+		F93B5C5E1C85DF7800DF76CA /* Contents */ = {
+			isa = PBXGroup;
+			children = (
+				F93B5C5F1C85DF7800DF76CA /* Info.plist */,
+				F93B5C601C85DF7800DF76CA /* MacOS */,
+				F93B5C621C85DF7800DF76CA /* PkgInfo */,
+				F93B5C631C85DF7800DF76CA /* Resources */,
+			);
+			path = Contents;
+			sourceTree = "<group>";
+		};
+		F93B5C601C85DF7800DF76CA /* MacOS */ = {
+			isa = PBXGroup;
+			children = (
+				F93B5C611C85DF7800DF76CA /* Filter */,
+			);
+			path = MacOS;
+			sourceTree = "<group>";
+		};
+		F93B5C631C85DF7800DF76CA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F93B5C641C85DF7800DF76CA /* CocoaFilterView.bundle */,
+				F93B5C651C85DF7800DF76CA /* InfoPlist.strings */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +319,7 @@
 			knownRegions = (
 				en,
 				Base,
+				English,
 			);
 			mainGroup = F929F4521C81AC810014A68D;
 			productRefGroup = F929F45C1C81AC810014A68D /* Products */;
@@ -357,8 +416,10 @@
 			files = (
 				F929F4921C81DA2D0014A68D /* TestView.swift in Sources */,
 				F929F4611C81AC810014A68D /* ViewController.swift in Sources */,
+				F93B5CDE1C85E40000DF76CA /* SinWaveGeneratorSample.swift in Sources */,
 				F929F45F1C81AC810014A68D /* AppDelegate.swift in Sources */,
 				F929F48A1C81ADBE0014A68D /* AudioEngineManager.swift in Sources */,
+				F93B5CE01C85E44E00DF76CA /* SinWaveGenerator.swift in Sources */,
 				F929F4901C81D73A0014A68D /* WaveformVisualizerView.swift in Sources */,
 				F929F48C1C81ADF70014A68D /* AppUtil.swift in Sources */,
 			);
@@ -402,6 +463,14 @@
 				F929F4651C81AC810014A68D /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F93B5C651C85DF7800DF76CA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F93B5C661C85DF7800DF76CA /* English */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
